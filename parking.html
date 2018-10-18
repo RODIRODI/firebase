@@ -1,0 +1,59 @@
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="calculparking" style="background: #ededff; box-shadow: 07px 07px; height: 220px; width: 350px; ">
+<br />
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PARKING TIME CALCULATION</h3>
+<br />
+&nbsp;&nbsp;<label>Arrival  date  &amp;  Time              </label>
+&nbsp; &nbsp; &nbsp; &nbsp;<input id="old" name="old" type="date" />
+<br /><br />
+&nbsp;&nbsp;<label>Departure date &amp; Time </label>
+  &nbsp;<input id="new" name="new" onblur="document.getElementById('total').value = (new Date(this.value) - new Date(old.value))/(1000*60*60*24)" type="date" />
+<br /><br />
+&nbsp;&nbsp;<label>Difference in days :</label>
+ 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="total" name="total" onchange="changeDate()" type="text" style="width:50px" /> 
+
+<br>
+</div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAH7UBaHUimNjBOjL1qvI6J8tg_n-gE15o",
+    authDomain: "stars-aviation-services.firebaseapp.com",
+    databaseURL: "https://stars-aviation-services.firebaseio.com",
+    projectId: "stars-aviation-services",
+    storageBucket: "stars-aviation-services.appspot.com",
+    messagingSenderId: "1074708238689"
+  };
+  firebase.initializeApp(config);
+   //////////
+   db.collection('touche').doc(this.username).collection('booksList').add({
+  password: this.password,
+  name: this.name,
+  rollno: this.rollno
+})
+
+///////////////
+var db=firebase.database.ref('touchee');
+ 
+ 
+ db.collection.insert('escale');
+
+
+db.push({
+
+    DATEA :"30/03/2018";
+
+});
+
+</script>
+
+
+
